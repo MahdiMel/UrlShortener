@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <!-- Icône de chaîne SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1rem;">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+    </svg>
+    <h1>Link Shortener</h1>
+    <p class="subtitle">Paste your long URL below to create a concise, easy-to-share link.</p>
+
+    <div class="input-group">
+        <input type="url" id="longUrlInput" placeholder="https://example.com/very/long/link" required autocomplete="off">
+        <button id="shortenBtn">Shorten</button>
+    </div>
+
+    <div id="notificationArea" class="hidden"></div>
+
+    <div id="resultContainer" class="hidden">
+        <p>Your short link is ready:</p>
+        <div class="result-box">
+            <a id="shortUrlLink" href="#" target="_blank"></a>
+            <button id="copyBtn">Copy</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
